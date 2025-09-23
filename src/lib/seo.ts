@@ -22,7 +22,7 @@ export const metaTags = {
     lighting: 'Low voltage landscape lighting for safety, security, and aesthetics. Extend your outdoor living hours with professional lighting.',
     lawn: 'Professional sod installation with Greensmix base. Functional lawn in 30 days with proper establishment. Serving Federal Way, Tacoma, and South Sound.',
     quote: 'Get your free landscaping quote from NW Landscape Management. Professional design, maintenance, and installation services for Federal Way, Tacoma, and South Sound area.',
-    contact: 'Contact NW Landscape Management for professional landscaping services. Call (253) 123-4567 or email info@nwlandscape.com. Serving Federal Way, Tacoma, and South Sound.',
+    contact: 'Contact NW Landscape Management for professional landscaping services. Call (253) 661-5824 or email info@nwlandscape.com. Serving Federal Way, Tacoma, and South Sound.',
     about: 'Learn about NW Landscape Management, a 25+ year established landscaping company serving Federal Way, Tacoma, and the South Sound area with award-winning services.',
     portfolio: 'View our portfolio of award-winning landscape projects. Before and after photos of residential and commercial landscaping in Federal Way, Tacoma, and South Sound.',
     serviceAreas: 'NW Landscape Management serves 18+ cities in the South Sound area including Federal Way, Tacoma, Kent, Auburn, and more. Check if we serve your area.',

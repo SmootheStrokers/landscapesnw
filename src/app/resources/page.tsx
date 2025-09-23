@@ -465,12 +465,12 @@ export default function ResourcesPage() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-pacific-evergreen to-forest-sage rounded-2xl p-8 lg:p-12 text-pure-white text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4 text-pure-white">
               Need Personalized Landscape Advice?
             </h2>
             <p className="text-xl text-pure-white/90 mb-8 max-w-2xl mx-auto">
-              Our experienced consultants are here to help with personalized advice for your specific 
-              property and needs. Get expert guidance from our 29+ years of Pacific Northwest experience.
+              Our experienced consultants provide personalized advice for your specific property and needs. 
+              Get expert guidance from our 29+ years of Pacific Northwest experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">

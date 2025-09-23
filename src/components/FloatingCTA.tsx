@@ -104,7 +104,7 @@ export default function FloatingCTA() {
                   className="w-full btn-primary"
                 >
                   <Phone className="w-5 h-5 mr-2 inline" />
-                  Call (253) 123-4567
+                  Call (253) 661-5824
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -112,7 +112,7 @@ export default function FloatingCTA() {
                   className="w-full btn-outline"
                 >
                   <Mail className="w-5 h-5 mr-2 inline" />
-                  Email Quote Request
+                  Request Quote
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}

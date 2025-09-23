@@ -130,7 +130,8 @@ export default function Hero() {
           className="hero-subtitle mb-8 max-w-3xl mx-auto text-pretty"
         >
           Landscape contractors that put the customer first. 29+ years of Pacific Northwest expertise 
-          serving Federal Way, Tacoma, and the South Sound area. Award-winning designs that exceed expectations.
+          serving Federal Way, Tacoma, and the South Sound area. 
+          Award-winning designs that exceed expectations.
         </motion.p>
 
         {/* CTA Buttons */}

@@ -416,7 +416,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-pacific-evergreen to-forest-sage rounded-2xl p-8 lg:p-12 text-pure-white text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4 text-pure-white">
               Ready to Experience the NW Landscape Difference?
             </h2>
             <p className="text-xl text-pure-white/90 mb-8 max-w-2xl mx-auto">

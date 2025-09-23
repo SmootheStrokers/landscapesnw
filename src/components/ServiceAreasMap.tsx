@@ -127,7 +127,7 @@ export default function ServiceAreasMap() {
         >
           <div className="max-w-2xl mx-auto">
             <MapPin className="w-16 h-16 mx-auto mb-6 text-sunset-gold" />
-            <h3 className="text-3xl font-display font-bold mb-4">
+            <h3 className="text-3xl font-display font-bold mb-4 text-pure-white">
               Interactive Service Area Map
             </h3>
             <p className="text-lg mb-6 opacity-90">
@@ -164,7 +164,7 @@ export default function ServiceAreasMap() {
             whileTap={{ scale: 0.95 }}
             className="btn-primary"
           >
-            Request Service Area Expansion
+            Request Service Expansion
           </motion.button>
         </motion.div>
       </div>

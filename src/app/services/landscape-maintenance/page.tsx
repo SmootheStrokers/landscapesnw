@@ -126,7 +126,7 @@ export default function LandscapeMaintenancePage() {
               className="btn-outline text-lg px-10 py-5 border-pure-white text-pure-white hover:bg-pure-white hover:text-pacific-evergreen"
             >
               <Phone className="w-5 h-5 mr-2 inline" />
-              Call (253) 123-4567
+              Call (253) 661-5824
             </motion.button>
           </motion.div>
         </div>
