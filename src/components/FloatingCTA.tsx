@@ -38,7 +38,7 @@ export default function FloatingCTA() {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [showExitIntent]);
+  }, [showExitIntent, hasShownExitIntent]);
 
   return (
     <>

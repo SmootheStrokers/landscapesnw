@@ -75,10 +75,10 @@ export default function Navigation() {
   ];
 
   const trustIndicators = [
-    { icon: Award, text: 'Award-Winning', color: 'text-sunset-gold' },
-    { icon: Clock, text: '29+ Years', color: 'text-forest-sage' },
-    { icon: Shield, text: 'Licensed & Insured', color: 'text-rain-blue' },
-    { icon: Users, text: '1000+ Projects', color: 'text-mountain-moss' }
+    { icon: Award, text: 'Award-Winning', color: 'text-accent-secondary' },
+    { icon: Clock, text: '29+ Years', color: 'text-accent' },
+    { icon: Shield, text: 'Licensed & Insured', color: 'text-accent-secondary-hover' },
+    { icon: Users, text: '1000+ Projects', color: 'text-accent-hover' }
   ];
 
   const isActivePath = (href: string) => {
@@ -89,20 +89,20 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar with Trust Indicators */}
-      <div className="bg-pacific-evergreen text-pure-white py-2 text-sm">
+      <div className="bg-fg text-surface py-2 text-sm">
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-3">
             {/* Contact Information */}
             <div className="flex flex-wrap items-center gap-4 text-xs lg:text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <a href="tel:2536615824" className="hover:text-sunset-gold transition-colors">
+                <a href="tel:2536615824" className="hover:text-accent-secondary transition-colors">
                   (253) 661-5824
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:info@nwlandscape.com" className="hover:text-sunset-gold transition-colors">
+                <a href="mailto:info@nwlandscape.com" className="hover:text-accent-secondary transition-colors">
                   info@nwlandscape.com
                 </a>
               </div>
@@ -133,19 +133,19 @@ export default function Navigation() {
         animate={{ y: 0 }}
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-pure-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
-            : 'bg-pacific-evergreen/95 backdrop-blur-sm'
+            ? 'bg-surface/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+            : 'bg-fg/95 backdrop-blur-sm'
         }`}
       >
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 bg-forest-sage rounded-lg flex items-center justify-center group-hover:bg-mountain-moss transition-colors duration-300">
-                <span className="text-pure-white font-display font-bold text-xl">NW</span>
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center group-hover:bg-accent-hover transition-colors duration-300">
+                <span className="text-surface font-display font-bold text-xl">NW</span>
               </div>
               <div className={`transition-colors duration-300 ${
-                scrolled ? 'text-pacific-evergreen' : 'text-pure-white'
+                scrolled ? 'text-fg' : 'text-surface'
               }`}>
                 <div className="font-display font-bold text-xl">NW Landscape</div>
                 <div className="text-sm font-accent">Management</div>
@@ -164,8 +164,8 @@ export default function Navigation() {
                     >
                       <button
                         className={`flex items-center gap-1 px-4 py-2 font-accent font-medium transition-colors duration-300 rounded-lg hover:bg-gray-100 ${
-                          scrolled ? 'text-pacific-evergreen' : 'text-pure-white'
-                        } ${isActivePath(item.href) ? 'text-forest-sage' : ''}`}
+                          scrolled ? 'text-fg' : 'text-surface'
+                        } ${isActivePath(item.href) ? 'text-accent' : ''}`}
                       >
                         {item.name}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
@@ -180,7 +180,7 @@ export default function Navigation() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 mt-2 w-80 bg-pure-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50"
+                            className="absolute top-full left-0 mt-2 w-80 bg-surface rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50"
                           >
                             <div className="p-4">
                               <div className="grid gap-3">
@@ -195,7 +195,7 @@ export default function Navigation() {
                                       {service.icon}
                                     </span>
                                     <div>
-                                      <div className="font-accent font-semibold text-pacific-evergreen group-hover:text-forest-sage transition-colors">
+                                      <div className="font-accent font-semibold text-fg group-hover:text-accent transition-colors">
                                         {service.name}
                                       </div>
                                       <div className="text-sm text-gray-600">
@@ -208,7 +208,7 @@ export default function Navigation() {
                               <div className="mt-4 pt-4 border-t border-gray-100">
                                 <Link
                                   href="/services"
-                                  className="flex items-center justify-center gap-2 text-forest-sage font-accent font-semibold hover:text-mountain-moss transition-colors"
+                                  className="flex items-center justify-center gap-2 text-accent font-accent font-semibold hover:text-accent-hover transition-colors"
                                   onClick={() => setActiveDropdown(null)}
                                 >
                                   View All Services
@@ -224,8 +224,8 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       className={`px-4 py-2 font-accent font-medium transition-colors duration-300 rounded-lg hover:bg-gray-100 ${
-                        scrolled ? 'text-pacific-evergreen' : 'text-pure-white'
-                      } ${isActivePath(item.href) ? 'text-forest-sage bg-gray-100' : ''}`}
+                        scrolled ? 'text-fg' : 'text-surface'
+                      } ${isActivePath(item.href) ? 'text-accent bg-gray-100' : ''}`}
                     >
                       {item.name}
                     </Link>
@@ -252,7 +252,7 @@ export default function Navigation() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`lg:hidden p-2 transition-colors duration-300 rounded-lg ${
-                scrolled ? 'text-pacific-evergreen hover:bg-gray-100' : 'text-pure-white hover:bg-white/10'
+                scrolled ? 'text-fg hover:bg-gray-100' : 'text-surface hover:bg-white/10'
               }`}
               aria-label="Toggle mobile menu"
             >
@@ -269,7 +269,7 @@ export default function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-pure-white shadow-lg border-t border-gray-100"
+              className="lg:hidden bg-surface shadow-lg border-t border-gray-100"
             >
               <div className="container-custom py-4">
                 <div className="space-y-2">
@@ -277,7 +277,7 @@ export default function Navigation() {
                     <div key={item.name}>
                       {item.hasDropdown ? (
                         <div>
-                          <div className="font-accent font-semibold text-pacific-evergreen py-2 px-4 text-lg">
+                          <div className="font-accent font-semibold text-fg py-2 px-4 text-lg">
                             {item.name}
                           </div>
                           <div className="ml-4 space-y-1">
@@ -286,7 +286,7 @@ export default function Navigation() {
                                 key={service.name}
                                 href={service.href}
                                 onClick={() => setIsOpen(false)}
-                                className="flex items-center gap-3 py-2 px-4 text-gray-600 hover:text-forest-sage hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                                className="flex items-center gap-3 py-2 px-4 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors duration-200"
                               >
                                 <span className="text-lg">{service.icon}</span>
                                 <div>
@@ -307,8 +307,8 @@ export default function Navigation() {
                           onClick={() => setIsOpen(false)}
                           className={`block py-3 px-4 font-accent font-medium transition-colors duration-300 rounded-lg ${
                             isActivePath(item.href)
-                              ? 'text-forest-sage bg-gray-100'
-                              : 'text-pacific-evergreen hover:text-forest-sage hover:bg-gray-50'
+                              ? 'text-accent bg-gray-100'
+                              : 'text-fg hover:text-accent hover:bg-gray-50'
                           }`}
                         >
                           {item.name}

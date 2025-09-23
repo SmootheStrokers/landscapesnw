@@ -284,38 +284,25 @@ export default function QuoteForm() {
               <p className="text-gray-600">What services are you interested in?</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {services.map((service) => (
-                <label
-                  key={service}
-                  className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-                    watch('service') === service
-                      ? 'border-forest-sage bg-forest-sage/5'
-                      : 'border-gray-300 hover:border-forest-sage/50'
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    {...register('service')}
-                    value={service}
-                    className="sr-only"
-                  />
-                  <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                    watch('service') === service
-                      ? 'border-forest-sage bg-forest-sage'
-                      : 'border-gray-300'
-                  }`}>
-                    {watch('service') === service && (
-                      <div className="w-2 h-2 bg-pure-white rounded-full m-0.5" />
-                    )}
-                  </div>
-                  <span className="font-accent">{service}</span>
-                </label>
-              ))}
+            <div>
+              <label className="block text-sm font-accent font-medium text-pacific-evergreen mb-2">
+                Select Service *
+              </label>
+              <select
+                {...register('service')}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-sage focus:border-transparent bg-white"
+              >
+                <option value="">Choose a service...</option>
+                {services.map((service) => (
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
+              {errors.service && (
+                <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>
+              )}
             </div>
-            {errors.service && (
-              <p className="text-red-500 text-sm">{errors.service.message}</p>
-            )}
           </motion.div>
         )}
 
@@ -333,42 +320,24 @@ export default function QuoteForm() {
               <p className="text-gray-600">Help us understand your project better.</p>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <label className="block text-sm font-accent font-medium text-pacific-evergreen mb-2">
                   Property Size *
                 </label>
-                <div className="grid grid-cols-1 gap-3">
+                <select
+                  {...register('propertySize')}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-sage focus:border-transparent bg-white"
+                >
+                  <option value="">Select size...</option>
                   {propertySizes.map((size) => (
-                    <label
-                      key={size}
-                      className={`flex items-center p-3 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-                        watch('propertySize') === size
-                          ? 'border-forest-sage bg-forest-sage/5'
-                          : 'border-gray-300 hover:border-forest-sage/50'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        {...register('propertySize')}
-                        value={size}
-                        className="sr-only"
-                      />
-                      <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                        watch('propertySize') === size
-                          ? 'border-forest-sage bg-forest-sage'
-                          : 'border-gray-300'
-                      }`}>
-                        {watch('propertySize') === size && (
-                          <div className="w-2 h-2 bg-pure-white rounded-full m-0.5" />
-                        )}
-                      </div>
-                      <span className="font-accent">{size}</span>
-                    </label>
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
                   ))}
-                </div>
+                </select>
                 {errors.propertySize && (
-                  <p className="text-red-500 text-sm">{errors.propertySize.message}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.propertySize.message}</p>
                 )}
               </div>
 
@@ -376,37 +345,19 @@ export default function QuoteForm() {
                 <label className="block text-sm font-accent font-medium text-pacific-evergreen mb-2">
                   Timeline *
                 </label>
-                <div className="grid grid-cols-1 gap-3">
+                <select
+                  {...register('timeline')}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-sage focus:border-transparent bg-white"
+                >
+                  <option value="">Select timeline...</option>
                   {timelines.map((timeline) => (
-                    <label
-                      key={timeline}
-                      className={`flex items-center p-3 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-                        watch('timeline') === timeline
-                          ? 'border-forest-sage bg-forest-sage/5'
-                          : 'border-gray-300 hover:border-forest-sage/50'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        {...register('timeline')}
-                        value={timeline}
-                        className="sr-only"
-                      />
-                      <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                        watch('timeline') === timeline
-                          ? 'border-forest-sage bg-forest-sage'
-                          : 'border-gray-300'
-                      }`}>
-                        {watch('timeline') === timeline && (
-                          <div className="w-2 h-2 bg-pure-white rounded-full m-0.5" />
-                        )}
-                      </div>
-                      <span className="font-accent">{timeline}</span>
-                    </label>
+                    <option key={timeline} value={timeline}>
+                      {timeline}
+                    </option>
                   ))}
-                </div>
+                </select>
                 {errors.timeline && (
-                  <p className="text-red-500 text-sm">{errors.timeline.message}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.timeline.message}</p>
                 )}
               </div>
 
@@ -414,37 +365,19 @@ export default function QuoteForm() {
                 <label className="block text-sm font-accent font-medium text-pacific-evergreen mb-2">
                   Budget Range *
                 </label>
-                <div className="grid grid-cols-1 gap-3">
+                <select
+                  {...register('budget')}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-forest-sage focus:border-transparent bg-white"
+                >
+                  <option value="">Select budget...</option>
                   {budgetRanges.map((budget) => (
-                    <label
-                      key={budget}
-                      className={`flex items-center p-3 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
-                        watch('budget') === budget
-                          ? 'border-forest-sage bg-forest-sage/5'
-                          : 'border-gray-300 hover:border-forest-sage/50'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        {...register('budget')}
-                        value={budget}
-                        className="sr-only"
-                      />
-                      <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                        watch('budget') === budget
-                          ? 'border-forest-sage bg-forest-sage'
-                          : 'border-gray-300'
-                      }`}>
-                        {watch('budget') === budget && (
-                          <div className="w-2 h-2 bg-pure-white rounded-full m-0.5" />
-                        )}
-                      </div>
-                      <span className="font-accent">{budget}</span>
-                    </label>
+                    <option key={budget} value={budget}>
+                      {budget}
+                    </option>
                   ))}
-                </div>
+                </select>
                 {errors.budget && (
-                  <p className="text-red-500 text-sm">{errors.budget.message}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.budget.message}</p>
                 )}
               </div>
             </div>

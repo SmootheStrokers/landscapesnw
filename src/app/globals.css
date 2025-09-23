@@ -4,6 +4,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design Token System - CSS Variables */
+:root {
+  /* Brand Colors */
+  --color-bg: #F8F9FA;
+  --color-fg: #1B3B0D;
+  --color-muted: #6C757D;
+  --color-accent: #2D5016;
+  --color-accent-hover: #4A7C59;
+  --color-accent-secondary: #DAA520;
+  --color-accent-secondary-hover: #5A9FD4;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Semantic Colors */
+  --color-primary: var(--color-accent);
+  --color-primary-hover: var(--color-accent-hover);
+  --color-secondary: var(--color-accent-secondary);
+  --color-secondary-hover: var(--color-accent-secondary-hover);
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-border-focus: var(--color-accent);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
+  
+  /* Spacing Scale (8px rhythm) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-24: 6rem;    /* 96px */
+}
+
 /* CSS Reset and Base Styles */
 * {
   box-sizing: border-box;

@@ -42,7 +42,7 @@ export default function QuotePage() {
       </section>
 
       {/* Quote Form Section */}
-      <section className="section-padding">
+      <section className="section-padding-sm">
         <div className="container-custom">
           <QuoteForm />
         </div>

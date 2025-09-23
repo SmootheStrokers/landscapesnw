@@ -33,9 +33,6 @@ export const config = {
     testing: true,
     documentation: true,
     deployment: true,
-    monitoring: true,
-    security: true,
-    analytics: true,
     i18n: true,
   },
 } as const;

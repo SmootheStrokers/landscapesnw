@@ -12,7 +12,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Pacific Northwest Color Palette
+        // Design Token System - Semantic Colors
+        bg: 'var(--color-bg)',
+        fg: 'var(--color-fg)',
+        muted: 'var(--color-muted)',
+        accent: 'var(--color-accent)',
+        'accent-hover': 'var(--color-accent-hover)',
+        'accent-secondary': 'var(--color-accent-secondary)',
+        'accent-secondary-hover': 'var(--color-accent-secondary-hover)',
+        surface: 'var(--color-surface)',
+        'surface-muted': 'var(--color-surface-muted)',
+        border: 'var(--color-border)',
+        'border-focus': 'var(--color-border-focus)',
+        success: 'var(--color-success)',
+        warning: 'var(--color-warning)',
+        error: 'var(--color-error)',
+        
+        // Legacy Brand Colors (for backward compatibility)
         'pacific-evergreen': '#1B3B0D',
         'forest-sage': '#2D5016',
         'mountain-moss': '#4A7C59',
@@ -52,11 +68,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        'display': ['var(--font-playfair)', 'serif'],
-        'body': ['var(--font-inter)', 'sans-serif'],
-        'accent': ['var(--font-montserrat)', 'sans-serif'],
-        'sans': ['var(--font-inter)', 'sans-serif'],
-        'serif': ['var(--font-playfair)', 'serif'],
+        'display': 'var(--font-display)',
+        'body': 'var(--font-body)',
+        'accent': 'var(--font-accent)',
+        'sans': 'var(--font-body)',
+        'serif': 'var(--font-display)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
@@ -109,6 +125,15 @@ const config: Config = {
         '3xl': '40px',
       },
       spacing: {
+        '1': 'var(--space-1)',
+        '2': 'var(--space-2)',
+        '3': 'var(--space-3)',
+        '4': 'var(--space-4)',
+        '6': 'var(--space-6)',
+        '8': 'var(--space-8)',
+        '12': 'var(--space-12)',
+        '16': 'var(--space-16)',
+        '24': 'var(--space-24)',
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',

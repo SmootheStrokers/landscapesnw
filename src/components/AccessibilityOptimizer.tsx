@@ -130,7 +130,7 @@ export default function AccessibilityOptimizer() {
     };
 
     // Store announce function globally for use in navigation
-    (window as any).announcePageChange = announcePageChange;
+    (window as { announcePageChange?: (title: string) => void }).announcePageChange = announcePageChange;
 
     // Cleanup
     return () => {

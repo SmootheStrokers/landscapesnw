@@ -2,6 +2,20 @@
 
 import { useEffect } from 'react';
 
+// Type definitions for Web Performance API
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export default function PerformanceOptimizer() {
   useEffect(() => {
     // Preload critical resources
@@ -37,11 +51,13 @@ export default function PerformanceOptimizer() {
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              console.log('FID:', entry.processingStart - entry.startTime);
+              const eventEntry = entry as PerformanceEventTiming;
+              console.log('FID:', eventEntry.processingStart - eventEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              if (!entry.hadRecentInput) {
-                console.log('CLS:', entry.value);
+              const layoutShiftEntry = entry as LayoutShift;
+              if (!layoutShiftEntry.hadRecentInput) {
+                console.log('CLS:', layoutShiftEntry.value);
               }
             }
           }

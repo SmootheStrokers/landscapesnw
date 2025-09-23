@@ -211,7 +211,7 @@ export default function ContactSection() {
               Ready to Get Started?
             </h3>
             <p className="text-xl mb-6 text-pure-white/90">
-              Whether large or small, we're happy to help. The sooner you call, the sooner we can get started.
+              Whether large or small, we&apos;re happy to help. The sooner you call, the sooner we can get started.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

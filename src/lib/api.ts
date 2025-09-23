@@ -100,14 +100,6 @@ export const api = {
     X_FRAME_OPTIONS: true,
     X_CONTENT_TYPE_OPTIONS: true,
   },
-  // Monitoring
-  monitoring: {
-    ENABLED: true,
-    METRICS_COLLECTION: true,
-    ERROR_TRACKING: true,
-    PERFORMANCE_TRACKING: true,
-    HEALTH_CHECKS: true,
-  },
   // Analytics
   analytics: {
     ENABLED: true,
@@ -115,16 +107,6 @@ export const api = {
     USER_TRACKING: true,
     PAGE_TRACKING: true,
     CONVERSION_TRACKING: true,
-  },
-  // Logging
-  logging: {
-    ENABLED: true,
-    LEVEL: 'info',
-    FORMAT: 'json',
-    DESTINATION: 'console',
-    ROTATION: true,
-    COMPRESSION: true,
-    ENCRYPTION: false,
   },
   // Validation
   validation: {
@@ -370,19 +352,5 @@ export const api = {
     PROVIDER: 'delve',
     BREAKPOINTS: true,
     STEPPING: true,
-  },
-  // Testing
-  testing: {
-    ENABLED: true,
-    PROVIDER: 'jest',
-    COVERAGE: true,
-    MOCKING: true,
-  },
-  // Documentation
-  documentation: {
-    ENABLED: true,
-    PROVIDER: 'swagger',
-    GENERATION: true,
-    VALIDATION: true,
   },
 } as const;

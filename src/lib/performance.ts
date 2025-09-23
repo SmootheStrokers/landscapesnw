@@ -295,7 +295,7 @@ export const performanceTesting = {
   ],
 } as const;
 
-export const performanceMetrics = {
+export const performanceUtils = {
   // Performance score calculation
   calculateScore: (metrics: Record<string, number>) => {
     const weights = {
