@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B3B0D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2D5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A7C59;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accentGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#5A9FD4;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main background gradient -->
+  <rect width="1200" height="800" fill="url(#heroGradient)"/>
+  
+  <!-- Accent circles -->
+  <circle cx="200" cy="200" r="120" fill="url(#accentGradient)"/>
+  <circle cx="1000" cy="600" r="180" fill="url(#accentGradient)"/>
+  <circle cx="600" cy="400" r="100" fill="url(#accentGradient)"/>
+  
+  <!-- Subtle pattern overlay -->
+  <defs>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="1" fill="#DAA520" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+</svg>
